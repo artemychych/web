@@ -1,6 +1,6 @@
 .graphic {
-    height: 250px;
-    width: 250px;
+    height: 350px;
+    width: 350px;
     margin: 40px;
     border: black;
 }
@@ -15,4 +15,8 @@
     display: flex;
     flex-direction: row;
 
+}
+
+.axisText {
+    font-size: small;
 }
