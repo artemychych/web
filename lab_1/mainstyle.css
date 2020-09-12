@@ -5,10 +5,18 @@
     border: black;
 }
 
-.choose {
-    height: 300px;
+.checkbox{
+    height: 200px;
     width: 250px;
     margin: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.chbel {
+    padding: 20px;
 }
 
 .main {
@@ -29,3 +37,5 @@
     fill:cadetblue;
     stroke-opacity: 0.5
 }
+
+
