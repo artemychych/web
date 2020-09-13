@@ -50,4 +50,12 @@
     stroke-opacity: 0.5
 }
 
+table {
+    width: 200px;
+}
 
+th {
+    width: 50px;
+    padding: 10px;
+
+}
