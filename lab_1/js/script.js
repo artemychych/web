@@ -9,9 +9,40 @@ var button3 = document.getElementById("btn3");
 var button4 = document.getElementById("btn4");
 var button5 = document.getElementById("btn5");
 
-var buttonIndex;
+var buttonId;
 
+button1.addEventListener('click', function (event){
+    event.preventDefault();
 
+    buttonId = 'btn1';
+    console.log('this is buttonId', buttonId);
+})
+
+button2.addEventListener('click', function (event){
+    event.preventDefault();
+
+    buttonId = 'btn2';
+    console.log('this is buttonId', buttonId);
+})
+
+button3.addEventListener('click', function (event){
+    event.preventDefault();
+
+    buttonId = 'btn3';
+    console.log('this is buttonId', buttonId);
+})
+button4.addEventListener('click', function (event){
+    event.preventDefault();
+
+    buttonId = 'btn4';
+    console.log('this is buttonId', buttonId);
+})
+button5.addEventListener('click', function (event){
+    event.preventDefault();
+
+    buttonId = 'btn5';
+    console.log('this is buttonId', buttonId);
+})
 
 
 form.addEventListener('submit', function(event ){
@@ -65,6 +96,12 @@ form.addEventListener('submit', function(event ){
       errorChbox.innerHTML = 'Cannot be blank';
       checkboxes[0].parentElement.insertBefore(errorChbox, checkboxes[0]);
     }
-
+    if (buttonId==null){
+        var errorBtn = document.createElement('div');
+        errorBtn.className='error';
+        errorBtn.style.color = 'red';
+        errorBtn.innerHTML = 'Cannot be untouched';
+        button1.parentElement.insertBefore(errorChbox, button1);
+    }
 
 })
