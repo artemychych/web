@@ -1,6 +1,4 @@
 var form = document.querySelector('.formWithValidation');
-var validateBtn = document.getElementById("submitBtn");
-var textField = document.getElementById("Yvalue");
 var fields = form.querySelectorAll('.field');
 var checkboxes = form.querySelectorAll('.chbox');
 var button1 = document.getElementById("btn1");
@@ -86,22 +84,27 @@ form.addEventListener('submit', function(event ){
     for (var i=0; i<checkboxes.length; i++) {
 
       if (checkboxes[i].checked){
+          console.log(checkboxes[i])
           chFlag++;
       }
     }
+
     if (chFlag===0){
       var errorChbox = document.createElement('div');
       errorChbox.className='error';
       errorChbox.style.color = 'red';
       errorChbox.innerHTML = 'Cannot be blank';
+
       checkboxes[0].parentElement.insertBefore(errorChbox, checkboxes[0]);
     }
-    if (buttonId==null){
+
+    if (buttonId===undefined){
+
         var errorBtn = document.createElement('div');
         errorBtn.className='error';
         errorBtn.style.color = 'red';
         errorBtn.innerHTML = 'Cannot be untouched';
-        button1.parentElement.insertBefore(errorChbox, button1);
+        button1.parentElement.insertBefore(errorBtn, button1);
     }
 
 })
