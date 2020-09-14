@@ -1,16 +1,10 @@
-var date = new Date();
-var time = date.getHours();
 
-if (time<13) {
-    alert('Доброе утро');
-}
+var form = document.querySelector('.formWithValidation');
+var validateBtn = document.getElementById("submitBtn");
+var textField = document.getElementById("Yvalue");
 
-else {
-    alert('Добрый день');
-}
-
-var a = 3 + 5;
-var l = new Array();
-var myArray = [];
-var people = ["Tom", "Grace", "Voldemar"]
-console.log(people);
+form.addEventListener('submit', function(event ){
+    event.preventDefault()
+  console.log('clicked o');
+  console.log('Y value'+textField.value);
+})
