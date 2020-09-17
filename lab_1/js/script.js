@@ -142,7 +142,7 @@ form.addEventListener('submit', function(event ){
             }
         }
         request.send(json);
-        console.log(json);
+
     }
 
 
