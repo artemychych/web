@@ -121,27 +121,17 @@ form.addEventListener('submit', function(event ){
                 checkbox.push(checkboxes[i].value);
             }
         }
+
         var textValue = document.getElementById('Yvalue');
         console.log(textValue.value);
 
 
         console.log(checkbox);
-        var data = {
-            checkData: checkbox,
-            textData: textValue.value,
-            btnData: buttonValue.value,
 
-        }
-        var json = JSON.stringify(data);
-        var request = new XMLHttpRequest();
-        request.open("POST", "php/postjson.php");
-        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        request.onreadystatechange = function () {
-            if (request.readyState == 4 && request.status == 200) {
-                document.getElementById("output").innerHTML = request.responseText;
-            }
-        }
-        request.send(json);
+        $.post('check.php', {'Y': textValue, 'R' : buttonValue, 'C': checkbox},
+            function(data) {
+                $('#news').html(data);
+            });
 
     }
 
