@@ -8,15 +8,16 @@
 
 </head>
 <body>
-    <div class="header">
-        <div class="hblock" id="1htext">Вариант 2408</div>
-        <div class="hblock" id="labText">Лабораторная работа по Web программированию</div>
-        <div class="hblock" id="2htext">Иннокентьев Артем P3213</div>
-    </div>
-    <div class="main">
-
-        <div class="left">
-            <div class="graphic">
+<header>
+    <div class="hblock" id="1htext">Вариант 2408</div>
+    <div class="hblock" id="labText">Лабораторная работа по Web программированию</div>
+    <div class="hblock" id="2htext">Иннокентьев Артем P3213</div>
+</header>
+<table>
+    <tbody>
+    <table width="100%" cellspacing="0" cellpadding="5">
+        <tr>
+            <td width="350" valign="top">
                 <svg height="350" width="350" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
                     <g class="axis">
                         <line x1="125" y1="0" x2="125" y2="250" style="stroke:rgb(0,0,0);stroke-width:1" />
@@ -52,74 +53,8 @@
                         <polygon class="circle" points="125,125 225,125 225,225 125,225" />
                     </g>
                 </svg>
-            </div>
-            <form class="formWithValidation">
-                <div class="choose">
-
-                        <div class="checkbox">
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="1chbox" name="ch1" value="-3">
-                                <label for="1chbox">-3</label>
-                            </div>
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="2chbox" name="ch1" value="-2">
-                                <label for="2chbox">-2</label>
-                            </div>
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="3chbox" name="ch1" value="-1">
-                                <label for="1chbox">-1</label>
-                            </div>
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="4chbox" name="ch1" value="0">
-                                <label for="1chbox">0</label>
-                            </div>
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="5chbox" name="ch1" value="1">
-                                <label for="1chbox">1</label>
-                            </div>
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="6chbox" name="ch1" value="2">
-                                <label for="1chbox">2</label>
-                            </div>
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="7chbox" name="ch1" value="3">
-                                <label for="1chbox">3</label>
-                            </div>
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="8chbox" name="ch1" value="4">
-                                <label for="1chbox">4</label>
-                            </div>
-                            <div class="chbel">
-                                <input type="checkbox" class='chbox' id="9chbox" name="ch1" value="5">
-                                <label for="1chbox">5</label>
-                            </div>
-                        </div>
-                        <div class="left_right">
-                            <div class="textField">
-                                <input type="text" id="Yvalue" class="field" name="Yvalue" placeholder="Введите значение Y">
-                            </div>
-                            <div class="select">
-                                <label>Выберите R:</label>
-                                <div class="buttons">
-                                    <input type="button" id="btn1" class="selectR" name="selectR" value="1">
-                                    <input type="button" id="btn2" class="selectR" name="selectR" value="1.5">
-                                    <input type="button" id="btn3" class="selectR" name="selectR" value="2">
-                                    <input type="button" id="btn4" class="selectR" name="selectR" value="2.5">
-                                    <input type="button" id="btn5" class="selectR" name="selectR" value="3">
-
-                                </div>
-                            </div>
-                            <div class="submit">
-                                <input type="submit" id="submitBtn" class="validateBtn" value="Проверить">
-                            </div>
-                        </div>
-                </div>
-            </form>
-        </div>
-
-
-        <div class="right">
-            <div class="table">
+            </td>
+            <td valign="top" colspan="2">
                 <table>
                     <thead>
                         <tr>
@@ -132,11 +67,83 @@
                             <th>Попадание</th>
                         </tr>
                     </thead>
-                </table>
-            </div>
-        </div>
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="450">
+                <form class="formWithValidation" action="php/check.php" id="form">
+                        <table class="checkbox">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="1chbox"  value="-3">
+                                    <label for="1chbox">-3</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="2chbox"  value="-2">
+                                    <label for="2chbox">-2</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="3chbox"  value="-1">
+                                    <label for="1chbox">-1</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="Yvalue" class="field" name="Y" placeholder="Введите значение Y">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="4chbox"  value="0">
+                                    <label for="1chbox">0</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="5chbox"  value="1">
+                                    <label for="1chbox">1</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="6chbox"  value="2">
+                                    <label for="1chbox">2</label>
+                                </td>
+                                <td>
+                                    <label>Выберите R:</label>
 
-    </div>
+                                    <input type="button" id="btn1" class="selectR" name="selectR" value="1">
+                                    <input type="button" id="btn2" class="selectR" name="selectR" value="1.5">
+                                    <input type="button" id="btn3" class="selectR" name="selectR" value="2">
+                                    <input type="button" id="btn4" class="selectR" name="selectR" value="2.5">
+                                    <input type="button" id="btn5" class="selectR" name="selectR" value="3">
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="7chbox"  value="3">
+                                    <label for="1chbox">3</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="8chbox"  value="4">
+                                    <label for="1chbox">4</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class='chbox' id="9chbox"  value="5">
+                                    <label for="1chbox">5</label>
+                                </td>
+                                <td>
+                                    <input type="submit" id="submitBtn" class="validateBtn" value="Проверить">
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+            </form>
+            </td>
+        </tr>
+    </table>
+    </tbody>
+</table>
+
     <script src="js/script.js"></script>
 </body>
 </html>

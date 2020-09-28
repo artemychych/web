@@ -113,8 +113,8 @@ form.addEventListener('submit', function(event ){
     }
 
     if (errFlag===0) {
-        var buttonValue = document.getElementById(buttonId);
-        console.log(buttonValue.value);
+        var buttonValue = document.getElementById(buttonId).value;
+
         var checkbox = [];
         for (var i = 0; i < checkboxes.length; i++){
             if (checkboxes[i].checked){
@@ -122,18 +122,23 @@ form.addEventListener('submit', function(event ){
             }
         }
 
-        var textValue = document.getElementById('Yvalue');
-        console.log(textValue.value);
+        var textValue = document.getElementById('Yvalue').value;
+        console.log(textValue);
+
+        const formData = new FormData(document.querySelector('#form'));
+        formData.append('R',buttonValue);
+        formData.append('X', checkbox);
+        fetch('php/check.php', {
+            method: 'POST',
+            body: formData,
 
 
-        console.log(checkbox);
+        }).then(response => response.text())
+            .then((data) =>  console.log(data))
 
-        $.post('check.php', {'Y': textValue, 'R' : buttonValue, 'C': checkbox},
-            function(data) {
-                $('#news').html(data);
-            });
 
     }
+
 
 
 })
