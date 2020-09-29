@@ -1,0 +1,33 @@
+.headerBlock {
+    color: #A5C25C;
+    padding: 10px;
+    width: 33%;
+    vertical-align: middle;
+}
+
+#header {
+    width: 100%;
+
+}
+
+#headerLeft{
+    text-align: left;
+}
+
+#headerRight {
+    text-align: right;
+}
+
+#headerCenter {
+    text-align: center;
+}
+
+header {
+    font-size: 15px;
+    background-color: #474444;
+    margin: 0;
+    align-content: center;
+    font-family: 'Roboto', 'Helvetica Nue', cursive;
+    vertical-align: center;
+
+}

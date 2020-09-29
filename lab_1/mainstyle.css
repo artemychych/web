@@ -39,23 +39,16 @@
 
 .axisText {
     font-size: small;
+    color: #A9B7C6;
 }
 
 
 .circle {
-    stroke: cadetblue;
+    stroke: #9876AA;
     stroke-width: 1;
-    fill-opacity: 0.5;
-    fill:cadetblue;
+    fill-opacity: 0.2;
+    fill: #9876AA;
     stroke-opacity: 0.5
 }
 
-table {
-    width: 200px;
-}
 
-th {
-    width: 50px;
-    padding: 10px;
-
-}

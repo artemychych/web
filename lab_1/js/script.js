@@ -7,7 +7,19 @@ var button3 = document.getElementById("btn3");
 var button4 = document.getElementById("btn4");
 var button5 = document.getElementById("btn5");
 var buttonId;
-
+var tableHead = document.getElementById("animated-table");
+var clearBtn = document.getElementById("clearBtn");
+clearBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    fetch('php/clear.php', {
+        method: 'POST',
+    }).then(response => response.text())
+        .then((data) =>  {
+            if (document.getElementById("tableBody")!=null) {
+                tableHead.removeChild(document.getElementById("tableBody"));
+            }
+        })
+})
 button1.addEventListener('click', function (event){
     event.preventDefault();
     buttonId = 'btn1';
@@ -39,6 +51,7 @@ button5.addEventListener('click', function (event){
     buttonId = 'btn5';
     console.log('this is buttonId', buttonId);
 })
+
 
 
 form.addEventListener('submit', function(event ){
@@ -131,10 +144,18 @@ form.addEventListener('submit', function(event ){
         fetch('php/check.php', {
             method: 'POST',
             body: formData,
-
-
         }).then(response => response.text())
-            .then((data) =>  console.log(data))
+            .then((data) =>  {
+                if (document.getElementById("tableBody")!=null) {
+                    tableHead.removeChild(document.getElementById("tableBody"));
+                }
+
+                var body = document.createElement('tbody');
+                body.innerHTML = data.trim();
+                body.id = "tableBody";
+                tableHead.append(body);
+
+            })
 
 
     }
