@@ -1,6 +1,6 @@
 var form = document.querySelector('.formWithValidation');
 var fields = form.querySelectorAll('.field');
-var checkboxes = form.querySelectorAll('.chbox');
+var checkboxes = form.querySelectorAll('.checkbox-data');
 var button1 = document.getElementById("btn1");
 var button2 = document.getElementById("btn2");
 var button3 = document.getElementById("btn3");
@@ -69,29 +69,29 @@ form.addEventListener('submit', function(event ){
       console.log(isNaN(fields[i].value));
       if (!fields[i].value){
           console.log('field is blank', fields[i]);
-          var error = document.createElement('div');
+          var error = document.createElement('td');
           error.className='error';
           error.style.color = 'red';
           error.innerHTML = 'Cannot be blank';
-          fields[i].parentElement.insertBefore(error, fields[i]);
+          alert('Значение Y не должен быть пустым')
           errFlag++;
       }
       else if (isNaN(fields[i].value)){
           console.log('field is NaN', fields[i]);
-          var error = document.createElement('div');
+          var error = document.createElement('td');
           error.className='error';
           error.style.color = 'red';
           error.innerHTML = 'Cannot be NaN';
-          fields[i].parentElement.insertBefore(error, fields[i]);
+          alert('Значение Y должен быть числом')
           errFlag++;
       }
       else if (fields[i].value <-5 || fields[i].value > 3){
           console.log('field is not in range (-5;3)', fields[i]);
-          var error = document.createElement('div');
+          var error = document.createElement('td');
           error.className='error';
           error.style.color = 'red';
           error.innerHTML = 'Cannot be in this range';
-          fields[i].parentElement.insertBefore(error, fields[i]);
+          alert('Значение Y должно находиться в пределах [-5;3]')
           errFlag++;
       }
     }
@@ -106,22 +106,21 @@ form.addEventListener('submit', function(event ){
     }
 
     if (chFlag===0){
-      var errorChbox = document.createElement('div');
+      var errorChbox = document.createElement('td');
       errorChbox.className='error';
       errorChbox.style.color = 'red';
       errorChbox.innerHTML = 'Cannot be blank';
 
-      checkboxes[0].parentElement.insertBefore(errorChbox, checkboxes[0]);
+      alert('Вы должны выбрать значение(я) Х')
       errFlag++;
     }
 
     if (buttonId===undefined){
-
-        var errorBtn = document.createElement('div');
+        var errorBtn = document.createElement('td');
         errorBtn.className='error';
         errorBtn.style.color = 'red';
         errorBtn.innerHTML = 'Cannot be untouched';
-        button1.parentElement.insertBefore(errorBtn, button1);
+        alert('Вы должны выбрать значение(я) R')
         errFlag++;
     }
 

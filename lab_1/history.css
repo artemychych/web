@@ -19,7 +19,7 @@
 
 
 #animated-table thead tr {
-    width: 96%;
+    width: 97%;
     width: -webkit-calc(100% - 16px);
     width:    -moz-calc(100% - 16px);
     width:         calc(100% - 16px);
