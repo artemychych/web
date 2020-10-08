@@ -9,7 +9,10 @@ var button5 = document.getElementById("btn5");
 var buttonId;
 var tableHead = document.getElementById("animated-table");
 var clearBtn = document.getElementById("clearBtn");
-var errorMail = document.getElementById("checkbox");
+var firstRow = document.getElementById("first-row");
+var fourthRow = document.getElementById("fourth-row");
+var fifthRow = document.getElementById("fifth-row");
+
 
 clearBtn.addEventListener('click', function (event) {
     event.preventDefault();
@@ -71,11 +74,12 @@ form.addEventListener('submit', function(event ){
       console.log(isNaN(fields[i].value));
       if (!fields[i].value){
           console.log('field is blank', fields[i]);
+
           var error = document.createElement('td');
           error.className='error';
           error.style.color = 'red';
-          error.innerHTML = 'Cannot be blank';
-          alert('Значение Y не должен быть пустым')
+          error.innerHTML = 'Значение Y не должен быть пустым';
+          fourthRow.append(error);
           errFlag++;
       }
       else if (isNaN(fields[i].value)){
@@ -83,8 +87,8 @@ form.addEventListener('submit', function(event ){
           var error = document.createElement('td');
           error.className='error';
           error.style.color = 'red';
-          error.innerHTML = 'Cannot be NaN';
-          alert('Значение Y должен быть числом')
+          error.innerHTML = 'Значение Y должен быть числом';
+          fourthRow.append(error);
           errFlag++;
       }
       else if (fields[i].value <-5 || fields[i].value > 3){
@@ -92,8 +96,8 @@ form.addEventListener('submit', function(event ){
           var error = document.createElement('td');
           error.className='error';
           error.style.color = 'red';
-          error.innerHTML = 'Cannot be in this range';
-          alert('Значение Y должно находиться в пределах [-5;3]')
+          error.innerHTML = 'Значение Y должно находиться в пределах [-5;3]';
+          fourthRow.append(error);
           errFlag++;
       }
     }
@@ -111,9 +115,8 @@ form.addEventListener('submit', function(event ){
       var errorChbox = document.createElement('td');
       errorChbox.className='error';
       errorChbox.style.color = 'red';
-      errorChbox.innerHTML = 'Cannot be blank';
-
-      alert('Вы должны выбрать значение(я) Х')
+      errorChbox.innerHTML = 'Вы должны выбрать значение(я) Х';
+      firstRow.append(errorChbox);
       errFlag++;
     }
 
@@ -121,8 +124,8 @@ form.addEventListener('submit', function(event ){
         var errorBtn = document.createElement('td');
         errorBtn.className='error';
         errorBtn.style.color = 'red';
-        errorBtn.innerHTML = 'Cannot be untouched';
-        alert('Вы должны выбрать значение(я) R')
+        errorBtn.innerHTML = 'Вы должны выбрать значение(я) R';
+        fifthRow.append(errorBtn);
         errFlag++;
     }
 
