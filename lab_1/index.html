@@ -84,37 +84,60 @@
         <tr>
             <td width="30%">
                     <form class="formWithValidation" action="php/check.php" id="form">
-                        <table class="checkbox">
-                            <tr>
-                                <td>
+                        <table class="checkbox" id="checkbox">
+                            <tr id="first-row">
+                                <td class="checkbox-styling">
                                     <input type="checkbox" class='checkbox-data' id="1chbox"  value="-3">
                                     <label for="1chbox" style="color: #A9B7C6; text-align: center">-3</label>
                                 </td>
-                                <td>
+                                <td class="checkbox-styling">
                                     <input type="checkbox" class='checkbox-data' id="2chbox"  value="-2">
                                     <label for="2chbox" style="color: #A9B7C6; text-align: center">-2</label>
                                 </td>
-                                <td>
+                                <td class="checkbox-styling" >
                                     <input type="checkbox" class='checkbox-data' id="3chbox"  value="-1">
                                     <label for="3chbox" style="color: #A9B7C6; text-align: center">-1</label>
                                 </td>
-                                <td>
-                                    <input type="text" id="Yvalue" class="field" name="Y" placeholder="Введите Y [-5;3]">
-                                </td>
                             </tr>
-                            <tr>
-                                <td>
+                            <tr id="second-row">
+                                <td class="checkbox-styling">
                                     <input type="checkbox" class='checkbox-data' id="4chbox"  value="0">
                                     <label for="4chbox" style="color: #A9B7C6; text-align: center">0</label>
                                 </td>
-                                <td>
+                                <td class="checkbox-styling">
                                     <input type="checkbox" class='checkbox-data' id="5chbox"  value="1">
                                     <label for="5chbox" style="color: #A9B7C6; text-align: center">1</label>
                                 </td>
-                                <td>
+                                <td class="checkbox-styling">
                                     <input type="checkbox" class='checkbox-data' id="6chbox"  value="2">
                                     <label for="6chbox" style="color: #A9B7C6; text-align: center">2</label>
                                 </td>
+                            </tr>
+
+                            <tr id="third-row">
+                                <td class="checkbox-styling">
+                                    <input type="checkbox" class='checkbox-data' id="7chbox"  value="3">
+                                    <label for="7chbox" style="color: #A9B7C6; text-align: center">3</label>
+                                </td>
+                                <td class="checkbox-styling">
+                                    <input type="checkbox" class='checkbox-data' id="8chbox"  value="4">
+                                    <label for="8chbox" style="color: #A9B7C6; text-align: center">4</label>
+                                </td>
+                                <td class="checkbox-styling">
+                                    <input type="checkbox" class='checkbox-data' id="9chbox"  value="5">
+                                    <label for="9chbox" style="color: #A9B7C6; text-align: center">5</label>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr id="fourth-row">
+                                <td>
+                                    <label style="color: #A9B7C6; text-align: center">Введите Y</label>
+                                    <br>
+                                    <input type="text" id="Yvalue" class="field" name="Y" placeholder="Введите Y [-5;3]">
+                                </td>
+                            </tr>
+                            <tr id="fifth-row">
                                 <td>
 
                                     <label style="color: #A9B7C6">Выберите R:</label>
@@ -125,23 +148,9 @@
                                     <input type="button" id="btn4" class="selectR" name="selectR" value="2.5">
                                     <input type="button" id="btn5" class="selectR" name="selectR" value="3">
 
-
-
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <input type="checkbox" class='checkbox-data' id="7chbox"  value="3">
-                                    <label for="7chbox" style="color: #A9B7C6; text-align: center">3</label>
-                                </td>
-                                <td>
-                                    <input type="checkbox" class='checkbox-data' id="8chbox"  value="4">
-                                    <label for="8chbox" style="color: #A9B7C6; text-align: center">4</label>
-                                </td>
-                                <td>
-                                    <input type="checkbox" class='checkbox-data' id="9chbox"  value="5">
-                                    <label for="9chbox" style="color: #A9B7C6; text-align: center">5</label>
-                                </td>
                                 <td>
                                     <table>
                                         <tr>

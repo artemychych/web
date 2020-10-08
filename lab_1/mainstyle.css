@@ -5,15 +5,6 @@
     border: black;
 }
 
-.checkbox{
-    height: 200px;
-    width: 250px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .textField {
     padding-top: 40px;
@@ -51,4 +42,9 @@
     stroke-opacity: 0.5
 }
 
+.checkbox-styling {
+    height: 40px;
+    width: 40px;
+
+}
 

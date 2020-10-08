@@ -6,16 +6,7 @@ $xValues = $_POST['X'];
 $yValue = (float) str_replace(",", ".", $_POST['Y']);
 $rValue = (float) $_POST['R'];
 
-function console_log( $data ){
-    echo '<script>';
-    echo 'console.log('. json_encode( $data ) .')';
-    echo '</script>';
-}
-
 function check($x, $y, $r){
-    console_log($x);
-    console_log($y);
-    console_log($r);
     if (($x <= $r && $x >= 0 && $y <= 0 && $y >= -$r) || (abs($x) >= ($r-2*$y) && $y <= $r/2 && $y >= 0 && $x >= -$r && $x <= 0) || (($x*$x + $y*$y) <= $r*$r && $x <= 0 && $y <= 0)){
         return "<span style='color: #008000'>True</span>";
     } else {

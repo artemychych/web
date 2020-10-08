@@ -9,6 +9,8 @@ var button5 = document.getElementById("btn5");
 var buttonId;
 var tableHead = document.getElementById("animated-table");
 var clearBtn = document.getElementById("clearBtn");
+var errorMail = document.getElementById("checkbox");
+
 clearBtn.addEventListener('click', function (event) {
     event.preventDefault();
     fetch('php/clear.php', {
