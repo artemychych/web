@@ -30,3 +30,24 @@
 #submitBtn:hover {
     border-radius: 16px;
 }
+
+
+#checkbox {
+    background-color: #474444;
+}
+
+#lower-checkbox {
+    background-color: #9876A2;
+}
+
+.textField {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.checkbox-styling {
+    height: 40px;
+    width: 40px;
+
+
+}

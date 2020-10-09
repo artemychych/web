@@ -8,9 +8,9 @@ $rValue = (float) $_POST['R'];
 
 function check($x, $y, $r){
     if (($x <= $r && $x >= 0 && $y <= 0 && $y >= -$r) || (abs($x) >= ($r-2*$y) && $y <= $r/2 && $y >= 0 && $x >= -$r && $x <= 0) || (($x*$x + $y*$y) <= $r*$r && $x <= 0 && $y <= 0)){
-        return "<span style='color: #008000'>True</span>";
+        return "<span style='color: #A5C25C'>True</span>";
     } else {
-        return "<span style='color: #ff0000'>False</span>";
+        return "<span style='color: #C25C72'>False</span>";
     }
 }
 

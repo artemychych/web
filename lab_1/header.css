@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Consolas';
+    src: url("source/consolas/consolas.ttf");
+}
+@font-face {
+    font-family: "Dosis-ExtraBold";
+    src: url("source/dosis/Dosis-ExtraBold.otf") format("opentype");
+}
+
 .headerBlock {
     color: #A5C25C;
     padding: 10px;
@@ -27,7 +36,7 @@ header {
     background-color: #474444;
     margin: 0;
     align-content: center;
-    font-family: 'Roboto', 'Helvetica Nue', cursive;
     vertical-align: center;
+    font-family: "Dosis-ExtraBold";
 
 }
