@@ -11,6 +11,7 @@
     background: #9876AA;
     box-shadow: 0 2px 2px 0 #9876A2;
     cursor: pointer;
+    font-family: "Consolas", serif;
 
 }
 
@@ -34,20 +35,34 @@
 
 #checkbox {
     background-color: #474444;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 9px;
+    font-family: "Consolas", serif;
 }
 
 #lower-checkbox {
     background-color: #9876A2;
+    margin-left: 20px;
+    border-radius: 9px;
+    font-family: "Consolas", serif;
 }
 
 .textField {
     padding-top: 40px;
     padding-bottom: 20px;
+    font-family: "Consolas";
+
+
 }
 
 .checkbox-styling {
     height: 40px;
-    width: 40px;
+    width: 55px;
 
 
+}
+
+#x-choose-header {
+    color: #A9B7C6;
 }
