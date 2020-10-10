@@ -8,6 +8,7 @@ var button4 = document.getElementById("btn4");
 var button5 = document.getElementById("btn5");
 var buttonId;
 var tableHead = document.getElementById("animated-table");
+var tableHeader = document.getElementById('table-header');
 var clearBtn = document.getElementById("clearBtn");
 var firstRow = document.getElementById("first-row");
 var fourthRow = document.getElementById("fourth-row");
@@ -153,10 +154,20 @@ form.addEventListener('submit', function(event ){
                 if (document.getElementById("tableBody")!=null) {
                     tableHead.removeChild(document.getElementById("tableBody"));
                 }
-
                 var body = document.createElement('tbody');
                 body.innerHTML = data.trim();
                 body.id = "tableBody";
+
+                var tableDataCount = body.querySelectorAll('tr');
+                if (tableDataCount.length > 23){
+                    tableHeader.style.width = 'calc(100% - 17px)';
+                    tableHeader.style.WebkitWidth = 'calc(100% - 17px)';
+                    tableHeader.style.MozWidth= 'calc(100% - 17px)';
+                } else {
+                    tableHeader.style.width = '';
+                    tableHeader.style.WebkitWidth = '';
+                    tableHeader.style.MozWidth= '';
+                }
                 tableHead.append(body);
 
             })

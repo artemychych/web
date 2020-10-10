@@ -66,3 +66,11 @@
 #x-choose-header {
     color: #A9B7C6;
 }
+
+#r-chooser {
+    margin-top: 20px;
+}
+
+#y-chooser {
+    padding-bottom: 20px;
+}

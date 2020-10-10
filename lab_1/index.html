@@ -68,14 +68,15 @@
             </td>
             <td valign="top" rowspan="2" width="70%">
                 <table id="animated-table">
+
                     <thead>
-                        <tr>
-                            <th class="table-data">X</th>
-                            <th class="table-data">Y</th>
-                            <th class="table-data">R</th>
-                            <th class="table-data">Попадание</th>
-                            <th class="table-data">Время создания</th>
-                            <th class="table-data">Время обработки</th>
+                        <tr id="table-header">
+                            <th class="table-header-data">X</th>
+                            <th class="table-header-data">Y</th>
+                            <th class="table-header-data">R</th>
+                            <th class="table-header-data">Попадание</th>
+                            <th class="table-header-data">Время создания</th>
+                            <th class="table-header-data">Время обработки</th>
                         </tr>
                     </thead>
                 </table>
@@ -138,14 +139,14 @@
                         </table>
                         <table id="lower-checkbox">
                             <tr id="fourth-row">
-                                <td align="center">
+                                <td align="center" id="y-chooser">
                                     <label style="color: #A9B7C6; text-align: center">Введите Y</label>
                                     <br>
                                     <input type="text" id="Yvalue" class="field" name="Y" placeholder="[-5;3]">
                                 </td>
                             </tr>
-                            <tr id="fifth-row">
-                                <td align="center">
+                            <tr id="fifth-row" >
+                                <td align="center" id="r-chooser">
 
                                     <label style="color: #A9B7C6">Выберите R:</label>
                                     <br>
