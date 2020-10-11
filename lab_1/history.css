@@ -20,7 +20,6 @@
 
 #animated-table thead tr {
     width: 100%;
-
     color: #9876AA;
 }
 
@@ -42,12 +41,12 @@
 #animated-table thead tr th {
     width: 16.3%;
     float: left;
-    border-right: 1px solid #2A2E32;
+    border-right: 1px solid #474444;
 }
 #animated-table tbody tr td {
     width: 16.3%;
     float: left;
-    border-right: 1px solid #2A2E32;
+    border-right: 1px solid #474444;
 }
 
 #animated-table tbody td:last-child, #animated-table thead th:last-child {
@@ -55,9 +54,27 @@
 }
 
 #animated-table tbody .table-data {
-    border-top: 1px solid #2A2E32;
+    border-top: 1px solid #474444;
 }
 
 .table-data {
     text-align: center;
+}
+
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

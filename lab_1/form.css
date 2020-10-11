@@ -1,6 +1,9 @@
 .checkbox-data {
-
+    cursor: pointer;
+    border-radius: 10px;
 }
+
+
 
 #submitBtn, #clearBtn {
 
@@ -22,15 +25,16 @@
 }
 
 .selectR {
-    border-radius: 3px;
+    border-radius: 6px;
     transition: border-radius 0.5s ease-in;
 }
 .selectR:hover {
     border-radius: 2.5px;
+    background: #d89eff;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(216, 158, 255, 0.25);
 }
-#submitBtn:hover {
-    border-radius: 16px;
-}
+
 
 
 #checkbox {
@@ -42,7 +46,7 @@
 }
 
 #lower-checkbox {
-    background-color: #9876A2;
+    background-color: #474444;
     margin-left: 20px;
     border-radius: 9px;
     font-family: "Consolas", serif;
@@ -68,9 +72,20 @@
 }
 
 #r-chooser {
-    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 #y-chooser {
     padding-bottom: 20px;
+}
+
+#choose-buttons {
+    padding-bottom: 20px;
+}
+
+#td-clearBtn {
+    padding-left: 10px;
+}
+#td-submitBtn {
+    padding-right: 10px;
 }
