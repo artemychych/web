@@ -28,32 +28,58 @@ clearBtn.addEventListener('click', function (event) {
 })
 button1.addEventListener('click', function (event){
     event.preventDefault();
+    button1.style.backgroundColor = '#A5C25C';
+    button2.style.backgroundColor = '';
+    button3.style.backgroundColor = '';
+    button4.style.backgroundColor = '';
+    button5.style.backgroundColor = '';
     buttonId = 'btn1';
+
     console.log('this is buttonId', buttonId);
+
 })
 
 button2.addEventListener('click', function (event){
     event.preventDefault();
-
+    button1.style.backgroundColor = '';
+    button2.style.backgroundColor = '#A5C25C';
+    button3.style.backgroundColor = '';
+    button4.style.backgroundColor = '';
+    button5.style.backgroundColor = '';
     buttonId = 'btn2';
+
     console.log('this is buttonId', buttonId);
 })
 
 button3.addEventListener('click', function (event){
     event.preventDefault();
-
+    button1.style.backgroundColor = '';
+    button2.style.backgroundColor = '';
+    button3.style.backgroundColor = '#A5C25C';
+    button4.style.backgroundColor = '';
+    button5.style.backgroundColor = '';
     buttonId = 'btn3';
+
     console.log('this is buttonId', buttonId);
 })
 button4.addEventListener('click', function (event){
     event.preventDefault();
-
+    button1.style.backgroundColor = '';
+    button2.style.backgroundColor = '';
+    button3.style.backgroundColor = '';
+    button4.style.backgroundColor = '#A5C25C';
+    button5.style.backgroundColor = '';
     buttonId = 'btn4';
+
     console.log('this is buttonId', buttonId);
 })
 button5.addEventListener('click', function (event){
     event.preventDefault();
-
+    button1.style.backgroundColor = '';
+    button2.style.backgroundColor = '';
+    button3.style.backgroundColor = '';
+    button4.style.backgroundColor = '';
+    button5.style.backgroundColor = '#A5C25C';
     buttonId = 'btn5';
     console.log('this is buttonId', buttonId);
 })
@@ -73,7 +99,7 @@ form.addEventListener('submit', function(event ){
     }
     for (var i=0; i<fields.length; i++) {
       console.log(isNaN(fields[i].value));
-      if (!fields[i].value){
+      if (!fields[i].value || (fields[i].value.trim().length === 0)){
           console.log('field is blank', fields[i]);
 
           var error = document.createElement('td');
